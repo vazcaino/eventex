@@ -19,8 +19,7 @@ def inscrever(request):
                            'vazcaino@gmail.com',
                            ['vazcaino@gmail.com', form.cleaned_data['email']])
 
-            #messages.success(request, 'Inscricao realizada com sucesso!')
-            messages.success(request, 'Inscricao realizada com sucesso!')
+            messages.success(request, 'Inscrição realizada com sucesso!')
 
             return HttpResponseRedirect('/inscricao/')
         else:

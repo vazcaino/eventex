@@ -88,7 +88,4 @@ class InscricaoMensagemSucesso(TestCase):
         data = dict(name='Luciano Vaz', cpf='12345678901', email='vazcaino@gmail.com', phone='47-98461-1785')
         response = self.client.post('/inscricao/', data, follow=True)
 
-        print(response)
-
         self.assertContains(response, 'Inscrição realizada com sucesso!')
-
