@@ -15,7 +15,7 @@ SIstema de Eventos encomendado pela Morena.
 git clone git@github.com:vazcaino/eventex.git wttd_lvz
 cd wttd_lvz
 python -m venv .wttd_lvz
-source .wttd/bin/activate
+source .wttd_lvz/bin/activate
 pip install -r requirements.txt
 cp contrib/env-sample .env
 python manage.py test
