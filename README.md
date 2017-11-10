@@ -1,10 +1,12 @@
 #Eventex Lvz
 
+Sistema de Eventos encomendado pela Morena.
+
+[![Build Status](https://travis-ci.org/vazcaino/eventex.svg?branch=master)](https://travis-ci.org/vazcaino/eventex)
+
 [![Maintainability](https://api.codeclimate.com/v1/badges/24fd12151d59f4f95430/maintainability)](https://codeclimate.com/github/vazcaino/eventex/maintainability)
 
 [![Test Coverage](https://api.codeclimate.com/v1/badges/24fd12151d59f4f95430/test_coverage)](https://codeclimate.com/github/vazcaino/eventex/test_coverage)
-
-SIstema de Eventos encomendado pela Morena.
 
 ##Como desenvolver:
 
