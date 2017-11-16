@@ -1,0 +1,3 @@
+exclude_paths:
+- eventex/core/static/js/*
+- eventex/core/static/css/*
