@@ -304,6 +304,9 @@ section header h2 {
 
 #venue {
     position: relative;
+    background: url(../img/map.jpg) no-repeat center center;
+    background-size: cover;
+    padding-bottom: 70px;
 }
 
 .venue-address {
@@ -359,6 +362,5 @@ section header h2 {
     background-color: #dff0d8;
     border-color: #d0e9c6;
 }
-
 
 /* Fim Customização */
