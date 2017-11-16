@@ -15,4 +15,5 @@ class HomeTest(TestCase):
         ''' O template tem que ser o index.html '''
         self.assertTemplateUsed(self.response, 'index.html')
 
-
+    ##def test_link_inscricao(self):
+    ##    self.assertContains(self.response, 'href="/inscricao/"')
