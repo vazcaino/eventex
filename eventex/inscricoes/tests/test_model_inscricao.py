@@ -1,3 +1,4 @@
+from datetime import datetime
 from django.test import TestCase
 from eventex.inscricoes.models import Inscricao
 
@@ -17,3 +18,8 @@ class InscricaoModelTest(TestCase):
 
     def test_criado_em(self):
         """ Inscricao tem que ter um atributo criado_em automaticamente """
+        self.assertIsInstance(self.obj.criado_em, datetime)
+
+    def test_str(self):
+        self.assertEqual('Luciano Vaz', str(self.obj))
+
