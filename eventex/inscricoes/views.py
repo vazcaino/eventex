@@ -6,6 +6,7 @@ from django.shortcuts import render
 from django.template.loader import render_to_string
 
 from eventex.inscricoes.forms import FormInscricoes
+from eventex.inscricoes.models import Inscricao
 
 
 def inscrever(request):
@@ -26,6 +27,8 @@ def criar(request):
                   form.cleaned_data['email'],
                   'inscricoes/email_inscricao.txt',
                   form.cleaned_data)
+
+    Inscricao.objects.create(**form.cleaned_data)
 
     messages.success(request, 'Inscrição realizada com sucesso!')
 
