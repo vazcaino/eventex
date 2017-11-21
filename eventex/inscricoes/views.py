@@ -22,11 +22,13 @@ def criar(request):
     if not form.is_valid():
         return render(request, 'inscricoes/form_inscricao.html', {'form': form})
 
+    body = render_to_string('inscricoes/email_inscricao.txt', form.cleaned_data)
+
     _enviar_email('Confirmação de inscrição',
                   settings.DEFAULT_FROM_EMAIL,
                   form.cleaned_data['email'],
-                  'inscricoes/email_inscricao.txt',
-                  form.cleaned_data)
+                  body,
+                  )
 
     Inscricao.objects.create(**form.cleaned_data)
 
@@ -39,6 +41,5 @@ def novo(request):
     return render(request, 'inscricoes/form_inscricao.html', {'form': FormInscricoes()})
 
 
-def _enviar_email(subject, from_, to_, template_name, context):
-    body = render_to_string(template_name, context)
+def _enviar_email(subject, from_, to_, body):
     mail.send_mail(subject, body, from_, [from_, to_])
