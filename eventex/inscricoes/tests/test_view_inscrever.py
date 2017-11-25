@@ -1,5 +1,6 @@
 from django.core import mail
 from django.test import TestCase
+
 from eventex.inscricoes.forms import FormInscricoes
 from eventex.inscricoes.models import Inscricao
 
@@ -47,6 +48,7 @@ class InscricaoPostValido(TestCase):
 
     def test_post(self):
         self.assertEqual(302, self.resp.status_code)
+        self.assertRedirects(self.resp, '/inscricao/1/')
 
     def test_email_inscricao_enviar(self):
         self.assertEqual(1, len(mail.outbox))
@@ -76,11 +78,3 @@ class InscricaoPostInvalido(TestCase):
     def test_nao_salvar_inscricao(self):
         self.assertFalse(Inscricao.objects.exists())
 
-
-class InscricaoMensagemSucesso(TestCase):
-
-    def test_message(self):
-        data = dict(name='Luciano Vaz', cpf='12345678901', email='vazcaino@gmail.com', phone='47-98461-1785')
-        response = self.client.post('/inscricao/', data, follow=True)
-
-        self.assertContains(response, 'Inscrição realizada com sucesso!')

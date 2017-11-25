@@ -16,10 +16,11 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 from eventex.core.views import home
-from eventex.inscricoes.views import inscrever
+from eventex.inscricoes.views import inscrever, detalhe
 
 urlpatterns = [
     url(r'^$', home),
     url(r'^inscricao/$', inscrever),
+    url(r'^inscricao/(\d+)/$', detalhe),
     url(r'^admin/', include(admin.site.urls)),
 ]

@@ -1,8 +1,10 @@
-Olá.
+Falae {{ inscricao.name }}!
 
-Nome: {{ name }}
-CPF: {{ cpf }}
-E-mail: {{ email }}
-Fone: {{ phone }}
+Você está inscrito no Eventex Lvz.
+
+Nome: {{ inscricao.name }}
+CPF: {{ inscricao.cpf }}
+E-mail: {{ inscricao.email }}
+Fone: {{ inscricao.phone }}
 
 Abs.
