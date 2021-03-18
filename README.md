@@ -1,4 +1,4 @@
-#Eventex Lvz
+# Eventex Lvz
 
 Sistema de Eventos encomendado pela Morena.
 
@@ -8,7 +8,7 @@ Sistema de Eventos encomendado pela Morena.
 
 [![Test Coverage](https://api.codeclimate.com/v1/badges/24fd12151d59f4f95430/test_coverage)](https://codeclimate.com/github/vazcaino/eventex/test_coverage)
 
-##Como desenvolver:
+## Como desenvolver:
 
 1. Clone o repositório
 2. Crie um virtualenv com Python 3.5
@@ -27,7 +27,7 @@ cp contrib/env-sample .env
 python manage.py test
 ```
 
-##Como fazer o deploy
+## Como fazer o deploy
 
 1. Crie uma instância no heroku
 2. Envie as configurações para o heroku
